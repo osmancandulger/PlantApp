@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Image, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
 import { Screen, Typography, View, Input, Row, GradientText, SvgIcon } from ':atoms/';
 import { HorizontalCards } from ':molecules/';
@@ -18,18 +18,17 @@ const Home: React.FC = () => {
   const theme = useTheme();
   const styles = useStyleSheet(initialStyle());
   const { push } = useRouting();
+  const { data: questionsData } = useGetQuestionsQuery();
+  const { data: categoriesData } = useGetCategoriesQuery();
 
-  const {
-    data: categoriesData,
-    isLoading: categoriesLoading,
-    error: categoriesError,
-  } = useGetCategoriesQuery();
+  const sortedQuestionsData = useMemo(() => {
+    return questionsData?.sort((a, b) => {
+      const orderA = a.order ?? Number.MAX_SAFE_INTEGER;
+      const orderB = b.order ?? Number.MAX_SAFE_INTEGER;
+      return orderA - orderB;
+    });
+  }, [questionsData]);
 
-  const {
-    data: questionsData,
-    isLoading: questionsLoading,
-    error: questionsError,
-  } = useGetQuestionsQuery();
   const getGreeting = (): string => {
     const hour = new Date().getHours();
 
@@ -45,7 +44,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <Screen backgroundColor="#FFFFFF">
+    <Screen>
       <ScrollView style={css(styles.container)} showsVerticalScrollIndicator={false}>
         <View style={styles.headerContainer}>
           <View style={styles.headerWrapper}>
@@ -124,14 +123,13 @@ const Home: React.FC = () => {
               {t('home.get-started.title')}
             </Typography>
 
-            {questionsData && (
+            {sortedQuestionsData && (
               <HorizontalCards
-                data={questionsData}
+                data={sortedQuestionsData}
                 onPressItem={(item: CardItem) => {
                   if (item.uri) {
                     push(ScreenNames.QUESTION_DETAIL, {
                       uri: item.uri,
-                      title: item.title,
                     });
                   }
                 }}

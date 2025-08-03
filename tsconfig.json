@@ -6,7 +6,7 @@
       ":hooks/*": ["src/hooks/*"],
       ":pages/*": ["src/components/screens"],
       ":atoms/*": ["src/components/atoms"],
-      ":molecules/*": ["src/components/molecules/*"],
+      ":molecules/*": ["src/components/molecules"],
       ":navigation/*": ["src/navigation/*"],
       ":enums/*": ["src/enums/*"],
       ":utils": ["src/utils"],

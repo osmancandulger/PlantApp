@@ -17,6 +17,7 @@ const QuestionDetail: React.FC = () => {
   const styles = useStyleSheet(initialStyle());
   const route = useRoute<QuestionDetailScreenRouteProp>();
   const { uri } = route.params;
+
   return (
     <Screen>
       <WebView source={{ uri }} style={styles.webview} startInLoadingState={true} />
