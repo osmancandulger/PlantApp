@@ -9,8 +9,8 @@ export const resources = {
 };
 i18next.use(initReactI18next).init({
   compatibilityJSON: 'v4',
-  lng: 'tr',
-  fallbackLng: 'tr',
+  lng: 'en',
+  fallbackLng: 'en',
   resources: resources,
 });
 

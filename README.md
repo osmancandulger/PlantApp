@@ -47,6 +47,8 @@ src/
 
 ## 🚀 Getting Started
 
+> **📖 Need help setting up your environment?** Check [Environment Setup Guide](docs/environment-setup.md) for detailed instructions.
+
 ### Prerequisites
 
 - Node.js >= 18
