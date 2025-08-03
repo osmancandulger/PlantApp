@@ -1,10 +1,10 @@
 import React from 'react';
-import { TouchableOpacity, Text } from 'react-native';
+import { Text } from 'react-native';
 import { css } from '@emotion/native';
 import { ButtonProps } from '.';
 import useStyleSheet from ':hooks/useStyleSheet';
 import initialStyle from './Button.styles';
-
+import { TouchableOpacity } from ':atoms/';
 const Button: React.FC<ButtonProps> = ({
   title,
   onPress,
@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <TouchableOpacity
-      style={css([styles.button, style])}
+      style={[styles.button, style]}
       onPress={onPress}
       disabled={disabled}
       activeOpacity={0.8}

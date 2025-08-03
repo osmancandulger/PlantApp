@@ -1,6 +1,15 @@
 import React, { useMemo } from 'react';
-import { Image, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
-import { Screen, Typography, View, Input, Row, GradientText, SvgIcon } from ':atoms/';
+import { Image, ImageBackground, ScrollView } from 'react-native';
+import {
+  Screen,
+  Typography,
+  View,
+  Input,
+  Row,
+  GradientText,
+  SvgIcon,
+  TouchableOpacity,
+} from ':atoms/';
 import { HorizontalCards } from ':molecules/';
 import { CardItem } from ':molecules/HorizontalCards/types';
 import useStyleSheet from ':hooks/useStyleSheet';
@@ -69,11 +78,7 @@ const Home: React.FC = () => {
           </View>
         </View>
         <View style={styles.contentWrapper}>
-          <TouchableOpacity
-            style={css(styles.premiumBanner)}
-            onPress={() => {}}
-            activeOpacity={0.8}
-          >
+          <TouchableOpacity style={styles.premiumBanner} onPress={() => {}} activeOpacity={0.8}>
             <View style={styles.premiumContent}>
               <Row style={styles.premiumContentWrapper}>
                 <View style={styles.iconContainer}>
@@ -142,7 +147,12 @@ const Home: React.FC = () => {
               {categoriesData &&
                 categoriesData?.data.map((item) => {
                   return (
-                    <View style={styles.categoryCard} key={item.id}>
+                    <TouchableOpacity
+                      style={styles.categoryCard}
+                      key={item.id}
+                      onPress={() => null}
+                      activeOpacity={0.6}
+                    >
                       <View style={styles.categoryImage}>
                         <ImageBackground
                           source={{ uri: item.image.url }}
@@ -152,7 +162,7 @@ const Home: React.FC = () => {
                           <Typography style={styles.categoryTitle}>{item.title}</Typography>
                         </ImageBackground>
                       </View>
-                    </View>
+                    </TouchableOpacity>
                   );
                 })}
             </View>

@@ -67,7 +67,7 @@ export default function (
       flex-direction: row;
       ${getVariantStyles(variant)}
       ${getSizeStyles(size)}
-      ${disabled ? 'opacity: 0.6;' : ''}
+      ${disabled && 'opacity: 0.5;'}
     `;
 
     style.text = `

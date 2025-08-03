@@ -1,31 +1,25 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React, { useLayoutEffect, useState } from 'react';
-import { Image, ScrollView, TouchableOpacity } from 'react-native';
-
-import { Screen, Typography, View, SvgIcon, Button } from ':atoms/';
+import { Image, ScrollView } from 'react-native';
+import { Screen, Typography, View, SvgIcon, Button, TouchableOpacity } from ':atoms/';
 import useStyleSheet from ':hooks/useStyleSheet';
 import initialStyle from './PayWall.styles';
-
 import { css } from '@emotion/native';
 import { Trans } from 'react-i18next';
 import { t } from 'i18next';
-import { ScreenNames } from ':enums/screens';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import useRouting, { navigationRef } from ':hooks/useRoutings';
 import { useDispatch } from 'react-redux';
 import { setOnboardingCompleted } from ':store/slices/userSlice';
 import { useNavigation } from '@react-navigation/native';
 
 const PayWall: React.FC = () => {
   const styles = useStyleSheet(initialStyle());
-  const { replace } = useRouting();
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const handleOnTapContinue = async () => {
     try {
       await AsyncStorage.setItem('onboardingCompleted', 'true');
       dispatch(setOnboardingCompleted(true));
-      // replace(ScreenNames.HOME);
     } catch (error) {
       console.error('Error saving onboarding status:', error);
     }
@@ -158,10 +152,10 @@ const PayWall: React.FC = () => {
                 {subscriptionOptions.map((option) => (
                   <TouchableOpacity
                     key={option.id}
-                    style={css(
+                    style={[
                       styles.subscriptionOption,
                       selectedOption === option.id && styles.subscriptionOptionSelected,
-                    )}
+                    ]}
                     onPress={() => setSelectedOption(option.id)}
                   >
                     <View style={styles.subscriptionOptionContent}>

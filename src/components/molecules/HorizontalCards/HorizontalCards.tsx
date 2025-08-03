@@ -1,6 +1,6 @@
 import React from 'react';
-import { ScrollView, TouchableOpacity, ImageBackground } from 'react-native';
-import { View, Typography } from ':atoms/';
+import { ScrollView, ImageBackground } from 'react-native';
+import { View, Typography, TouchableOpacity } from ':atoms/';
 import { css } from '@emotion/native';
 import useStyleSheet from ':hooks/useStyleSheet';
 import initialStyle from './HorizontalCards.styles.ts';
@@ -21,7 +21,7 @@ const HorizontalCards: React.FC<HorizontalCardsProps> = ({
   const renderCard = (item: any) => (
     <TouchableOpacity
       key={item.id}
-      style={css([styles.card, cardStyle])}
+      style={[styles.card, cardStyle]}
       onPress={() => onPressItem?.(item)}
       activeOpacity={0.8}
     >

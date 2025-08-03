@@ -18,6 +18,7 @@ export { default as Row } from './Row';
 export { default as ScrollView } from './ScrollView';
 
 export { default as SvgIcon } from './SvgIcon';
+export { default as TouchableOpacity } from './TouchableOpacity';
 export { default as LinearGradient } from './LinearGradient';
 
 export { default as Input } from './Input';
