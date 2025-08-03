@@ -1,99 +1,193 @@
-# PlantApp
+# 🌱 PlantApp
 
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+A modern React Native mobile application designed to help users identify, care for, and manage their plants. Built with TypeScript, Redux Toolkit, and a atomic component-based architecture.
 
-# Getting Started
+## ✨ Features
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+- **🌿 Plant Identification**: Scan and identify plants using your device's camera
+- **🏡 My Garden**: Track and manage your plant collection
+- **🔍 Plant Diagnosis**: Get detailed care information and troubleshooting
+- **📱 Modern UI**: Beautiful, intuitive interface with smooth animations
+- **🌍 Multi-language Support**: Internationalization with i18next
+- **🎨 Theme Support**: Light and dark mode with custom theming
+- **📊 Plant Care Tracking**: Monitor watering, fertilizing, and growth
+- **🔔 Care Reminders**: Never forget to water your plants again
 
-## Step 1: Start Metro
+## 🏗️ Architecture
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### Tech Stack
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- **Framework**: React Native 0.80.2
+- **Language**: TypeScript
+- **State Management**: Redux Toolkit
+- **Navigation**: React Navigation v7
+- **Styling**: Emotion Native
+- **Animations**: React Native Reanimated
+- **Testing**: Jest + React Native Testing Library
+- **Internationalization**: i18next
 
-```sh
-# Using npm
-npm start
+### Project Structure
 
-# OR using Yarn
-yarn start
+```
+src/
+├── components/          # Reusable UI components
+│   ├── atoms/          # Basic building blocks
+│   ├── molecules/      # Complex components
+│   └── screens/        # Screen components
+├── navigation/         # Navigation configuration
+├── store/             # Redux store and slices
+├── hooks/             # Custom React hooks
+├── themes/            # Theme configuration
+├── constants/         # App constants
+├── types/             # TypeScript type definitions
+├── utils/             # Utility functions
+├── assets/            # Images, icons, fonts
+└── locale/            # Internationalization files
 ```
 
-## Step 2: Build and run your app
+## 🚀 Getting Started
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### Prerequisites
 
-### Android
+- Node.js >= 18
+- React Native CLI
+- Android Studio (for Android development)
+- Xcode (for iOS development)
 
-```sh
-# Using npm
-npm run android
+### Installation
 
-# OR using Yarn
-yarn android
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/PlantApp.git
+   cd PlantApp
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   # Using npm
+   npm install
+
+   # OR using Yarn
+   yarn install
+   ```
+
+3. **iOS Setup** (macOS only)
+   ```bash
+   # Install CocoaPods dependencies
+   bundle install
+   bundle exec pod install
+   ```
+
+### Running the App
+
+1. **Start Metro bundler**
+
+   ```bash
+   npm start
+   # OR
+   yarn start
+   ```
+
+2. **Run on Android**
+
+   ```bash
+   npm run android
+   # OR
+   yarn android
+   ```
+
+3. **Run on iOS**
+   ```bash
+   npm run ios
+   # OR
+   yarn ios
+   ```
+
+## 🧪 Testing
+
+Run the test suite:
+
+```bash
+npm test
+# OR
+yarn test
 ```
 
-### iOS
+Run tests with coverage:
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+npm test -- --coverage
 ```
 
-Then, and every time you update your native dependencies, run:
+## 📱 Screenshots
 
-```sh
-bundle exec pod install
+| Home Screen                                                          | Plant Scanner                                                              | My Garden                                                                |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| ![Home](https://via.placeholder.com/300x600/4CAF50/FFFFFF?text=Home) | ![Scanner](https://via.placeholder.com/300x600/4CAF50/FFFFFF?text=Scanner) | ![Garden](https://via.placeholder.com/300x600/4CAF50/FFFFFF?text=Garden) |
+
+## 🛠️ Development
+
+### Code Style
+
+This project uses:
+
+- **ESLint** for code linting
+- **Prettier** for code formatting
+- **TypeScript** for type safety
+
+### Available Scripts
+
+```bash
+npm run android      # Run on Android
+npm run ios         # Run on iOS
+npm start           # Start Metro bundler
+npm test            # Run tests
+npm run lint        # Run ESLint
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### Component Architecture
 
-```sh
-# Using npm
-npm run ios
+The app follows Atomic Design principles:
 
-# OR using Yarn
-yarn ios
-```
+- **Atoms**: Basic UI components (Button, Input, Typography)
+- **Molecules**: Complex components (Carousel, HorizontalCards)
+- **Organisms**: Screen-level components
+- **Templates**: Layout structures
+- **Pages**: Complete screens
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 📦 Dependencies
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+### Core Dependencies
 
-## Step 3: Modify your app
+- `react-native`: 0.80.2
+- `@reduxjs/toolkit`: State management
+- `react-navigation`: Navigation
+- `react-native-reanimated`: Animations
+- `@emotion/native`: Styling
+- `i18next`: Internationalization
 
-Now that you have successfully run the app, let's make changes!
+### Development Dependencies
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+- `typescript`: Type safety
+- `jest`: Testing framework
+- `@testing-library/react-native`: Testing utilities
+- `eslint`: Code linting
+- `prettier`: Code formatting
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+### Development Guidelines
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+- Follow TypeScript best practices
+- Write tests for new features
+- Use conventional commit messages
+- Follow the existing code style
+- Update documentation as needed
 
-## Congratulations! :tada:
+## 📄 License
 
-You've successfully run and modified your React Native App. :partying_face:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Made with ❤️**

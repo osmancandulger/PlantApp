@@ -48,15 +48,6 @@ export default function () {
       font-weight: ${FontWeight.MEDIUM};
       color: ${theme.color.white};
       line-height: ${LineHeight.NORMAL}px;
-      
-    `;
-
-    style.subtitle = `
-      font-size: ${scaleFontSize(13)}px;
-      font-weight: ${FontWeight.REGULAR};
-      color: ${theme.color.white};
-      opacity: 0.7;
-      margin-top: ${getResponsiveHeight(4)}px;
     `;
 
     return style;

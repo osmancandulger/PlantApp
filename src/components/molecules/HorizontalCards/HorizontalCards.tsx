@@ -38,9 +38,6 @@ const HorizontalCards: React.FC<HorizontalCardsProps> = ({
             reducedTransparencyFallbackColor="red"
           />
           <Typography style={css([styles.title, titleStyle])}>{item.title}</Typography>
-          {item.subtitle && (
-            <Typography style={css([styles.subtitle, subtitleStyle])}>{item.subtitle}</Typography>
-          )}
         </View>
       </ImageBackground>
     </TouchableOpacity>

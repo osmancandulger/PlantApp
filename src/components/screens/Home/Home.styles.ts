@@ -116,7 +116,6 @@ export default function () {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 12px;
     `;
 
     style.categoryCard = `
@@ -125,15 +124,15 @@ export default function () {
       background-color: ${theme.color.bakgroundSecondary};
       border-radius: 12px;
       border: .5px solid ${theme.color.borderGreen};
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     `;
 
     style.cardImage = `
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 146px;
-      height: 152px;
+      width: ${getResponsiveWidth(146)}px;
+      height: ${getResponsiveHeight(152)}px;
     `;
 
     style.categoryTitle = `
@@ -142,6 +141,7 @@ export default function () {
       font-weight: ${FontWeight.MEDIUM};
       color: ${theme.color.textPrimay};
       line-height: 21px;
+      margin: 16px 0px;
     `;
 
     style.categoryImageContainer = `
