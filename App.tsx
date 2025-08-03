@@ -6,6 +6,7 @@ import { store } from './src/store';
 import StackNavigation from './src/navigation';
 import { ThemeProvider } from './src/providers/ThemeProvider';
 import NavigationProvider from './src/navigation/NavigationProvider';
+import './src/helper/i18next';
 
 function App(): React.JSX.Element {
   return (

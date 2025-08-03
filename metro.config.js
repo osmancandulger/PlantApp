@@ -17,7 +17,7 @@ module.exports = async () => {
     ':colors': `${__dirname}/src/colors`,
     ':enums': `${__dirname}/src/enums`,
     ':types': `${__dirname}/src/types`,
-    ':assets': `${__dirname}/assets`,
+    ':assets': `${__dirname}/src/assets`,
     ':constants': `${__dirname}/src/constants`,
     ':screens': `${__dirname}/src/screens`,
     ':helper': `${__dirname}/src/helper`,

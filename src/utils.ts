@@ -24,6 +24,11 @@ export const convertToTitleCase = (input: string): string => {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(' ');
 };
+export const getResponsiveWidth = (designPx: number) =>
+  (Dimensions.get('window').width * designPx) / 375;
+
+export const getResponsiveHeight = (designPx: number) =>
+  (Dimensions.get('window').height * designPx) / 812;
 
 export function scaleFontSize(size: number) {
   const { width, height } = Dimensions.get('window');

@@ -12,7 +12,9 @@
       ":utils": ["src/utils"],
       ":store/*": ["src/store/*"],
       ":components/*": ["src/components/*"],
-      ":screens/*": ["src/screens/*"]
+      ":screens/*": ["src/screens/*"],
+      ":constants/*": ["src/constants/*"],
+      ":assets/*": ["src/assets/*"]
     }
   },
   "exclude": ["node_modules"]
