@@ -17,3 +17,12 @@ export type TabNavigatorParamList = {
   MyGarden: undefined;
   Profile: undefined;
 };
+
+export type SecureStackParamList = {
+  TabsNavigator: undefined;
+  Settings: undefined;
+  PayWall: undefined;
+  QuestionDetail: {
+    uri: string;
+  };
+};

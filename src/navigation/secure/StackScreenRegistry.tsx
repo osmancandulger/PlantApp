@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScreenNames } from ':enums/screens';
 import { Text } from 'react-native';
-import { SettingsScreen } from ':pages/';
+import { SettingsScreen, QuestionDetailScreen } from ':pages/';
 
 type NavigationScreenProps = {
   name: string;
@@ -19,6 +19,15 @@ export const SecureScreenRegistry: NavigationScreenProps[] = [
       headerTitleAlign: 'center',
       headerBackVisible: true,
       headerLeft: () => <Text>Header Left</Text>,
+    },
+  },
+  {
+    name: ScreenNames.QUESTION_DETAIL,
+    component: QuestionDetailScreen,
+    options: {
+      title: '',
+      headerShown: true,
+      headerBackVisible: true,
     },
   },
 ];

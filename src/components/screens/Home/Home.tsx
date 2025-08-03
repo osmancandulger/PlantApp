@@ -1,7 +1,8 @@
 import React from 'react';
 import { Image, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
 import { Screen, Typography, View, Input, Row, GradientText, SvgIcon } from ':atoms/';
-import { HorizontalCards, CardItem } from ':molecules/';
+import { HorizontalCards } from ':molecules/';
+import { CardItem } from ':molecules/HorizontalCards/types';
 import useStyleSheet from ':hooks/useStyleSheet';
 import initialStyle from './Home.styles';
 import { t } from 'i18next';
@@ -10,10 +11,13 @@ import { InputType } from ':enums/common';
 import { useTheme } from '@emotion/react';
 import { getResponsiveHeight, getResponsiveWidth } from ':utils';
 import { useGetCategoriesQuery, useGetQuestionsQuery } from ':store/slices/apiSlice';
+import useRouting from ':hooks/useRoutings';
+import { ScreenNames } from ':enums/screens';
 const NOTIFICATION_COUNT = 1;
 const Home: React.FC = () => {
   const theme = useTheme();
   const styles = useStyleSheet(initialStyle());
+  const { push } = useRouting();
 
   const {
     data: categoriesData,
@@ -124,7 +128,12 @@ const Home: React.FC = () => {
               <HorizontalCards
                 data={questionsData}
                 onPressItem={(item: CardItem) => {
-                  console.log('Selected item:', item);
+                  if (item.uri) {
+                    push(ScreenNames.QUESTION_DETAIL, {
+                      uri: item.uri,
+                      title: item.title,
+                    });
+                  }
                 }}
               />
             )}

@@ -10,3 +10,4 @@ export { default as ScannerScreen } from './Scanner';
 export { default as MyGardenScreen } from './MyGarden';
 export { default as ProfileScreen } from './Profile';
 export { default as SettingsScreen } from './Settings';
+export { default as QuestionDetailScreen } from './QuestionDetail';

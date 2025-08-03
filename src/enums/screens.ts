@@ -8,4 +8,5 @@ export enum ScreenNames {
   PROFILE = 'Profile',
   SETTINGS = 'Settings',
   SCANNER = 'Scanner',
+  QUESTION_DETAIL = 'QuestionDetail',
 }
