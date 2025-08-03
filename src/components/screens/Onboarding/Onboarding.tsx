@@ -33,7 +33,6 @@ const Onboarding: React.FC = () => {
     setCurrentPosition(position);
   };
 
-  // First slide content
   const FirstSlide = () => (
     <View style={styles.slideContainer}>
       <View style={styles.header}>
@@ -65,7 +64,6 @@ const Onboarding: React.FC = () => {
     </View>
   );
 
-  // Second slide content
   const SecondSlide = () => (
     <View style={styles.slideContainer}>
       <View style={styles.header}>

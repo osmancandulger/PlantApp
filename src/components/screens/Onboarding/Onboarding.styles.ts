@@ -1,5 +1,5 @@
-import { FontWeight, LetterSpacing } from ':constants/typography';
-import { getResponsiveHeight, scaleFontSize } from ':utils';
+import { FontWeight } from ':constants/typography';
+import { getResponsiveHeight, getResponsiveWidth, scaleFontSize } from ':utils';
 import { StyleSheet } from '@emotion/primitives';
 import { Theme } from '@emotion/react';
 
@@ -66,7 +66,6 @@ export default function () {
       background-color: #28AF6E;
     `;
 
-    // Carousel specific styles
     style.carouselContainer = `
       flex: 1;
     `;
@@ -81,7 +80,6 @@ export default function () {
       flex: 1;
     `;
 
-    // Title and brush styles
     style.titleContainer = `
       align-items: flex-end;
     `;
@@ -96,7 +94,7 @@ export default function () {
   
     `;
     style.guideBrush = `
-      width: 150px;
+      width: ${getResponsiveWidth(150)}px;
       margin-top: 5px;
       margin-right: 55px;
     `;

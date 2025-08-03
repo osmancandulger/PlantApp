@@ -9,7 +9,6 @@ import 'react-native-gesture-handler';
 import TabsNavigator from '../TabsNavigator';
 import { SecureScreenRegistry } from './StackScreenRegistry';
 import { useTranslation } from 'react-i18next';
-// import useBootSplash from '@/hooks/useBootSplash';
 
 const Stack = createStackNavigator();
 type NavigationScreenProps = {
