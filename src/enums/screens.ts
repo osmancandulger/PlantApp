@@ -1,10 +1,8 @@
 export enum ScreenNames {
   // NonSecure screens
   WELCOME = 'Welcome',
-  IDENTIFY = 'Identify',
-  CARE_GUIDES = 'CareGuides',
-  PAYWALL = 'PayWall',
   ONBOARDING = 'Onboarding',
+  PAYWALL = 'PayWall',
 
   // Secure screens (Tabs)
   HOME = 'Home',

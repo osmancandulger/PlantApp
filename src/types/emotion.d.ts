@@ -8,6 +8,16 @@ declare module '@emotion/react' {
     type: ThemeType;
     color: {
       primary: string;
+      textMuted: string;
+      textPrimay: string;
+      green: string;
+      white: string;
+      overlayMuted: string;
+      overlayDark: string;
+      surfaceDarkGreen: string;
+      shadowGreen: string;
+      lightBlack: string;
+      noirGreen: string;
     };
   }
 }

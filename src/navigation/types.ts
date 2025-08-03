@@ -6,7 +6,6 @@ export type RootStackParamList = {
 export type OnboardingStackParamList = {
   Welcome: undefined;
   Identify: undefined;
-  CareGuides: undefined;
   PayWall: undefined;
 };
 

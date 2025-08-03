@@ -1,6 +1,5 @@
 import { ScreenNames } from ':enums/screens';
-import { WelcomeScreen, IdentifyScreen, CareGuidesScreen, PayWallScreen } from ':pages/';
-import OnboardingScreen from '../../screens/onboarding/OnboardingScreen';
+import { WelcomeScreen, PayWallScreen, OnboardingScreen } from ':pages/';
 
 type NavigationScreenProps = {
   name: string;
@@ -18,21 +17,14 @@ export const ScreenRegistry: NavigationScreenProps[] = [
     },
   },
   {
-    name: ScreenNames.IDENTIFY,
-    component: IdentifyScreen,
+    name: ScreenNames.ONBOARDING,
+    component: OnboardingScreen,
     options: {
       title: '',
       headerShown: false,
     },
   },
-  {
-    name: ScreenNames.CARE_GUIDES,
-    component: CareGuidesScreen,
-    options: {
-      title: '',
-      headerShown: false,
-    },
-  },
+
   {
     name: ScreenNames.PAYWALL,
     component: PayWallScreen,
@@ -40,10 +32,5 @@ export const ScreenRegistry: NavigationScreenProps[] = [
       title: '',
       headerShown: false,
     },
-  },
-  {
-    name: ScreenNames.ONBOARDING,
-    component: OnboardingScreen,
-    options: {},
   },
 ];

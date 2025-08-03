@@ -18,3 +18,4 @@ export { default as Row } from './Row';
 export { default as ScrollView } from './ScrollView';
 
 export { default as SvgIcon } from './SvgIcon';
+export { default as LinearGradient } from './LinearGradient';
