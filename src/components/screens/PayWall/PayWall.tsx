@@ -11,14 +11,23 @@ import { t } from 'i18next';
 import { ScreenNames } from ':enums/screens';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import useRouting from ':hooks/useRoutings';
+import { useDispatch } from 'react-redux';
+import { setOnboardingCompleted } from ':store/slices/userSlice';
 
 const PayWall: React.FC = () => {
   const styles = useStyleSheet(initialStyle());
   const { replace } = useRouting();
+  const dispatch = useDispatch();
 
   const handleOnTapContinue = async () => {
     try {
+      // Update AsyncStorage
       await AsyncStorage.setItem('onboardingCompleted', 'true');
+
+      // Update Redux state
+      dispatch(setOnboardingCompleted(true));
+
+      // Navigate to secure navigation (will auto-redirect to tabs)
       replace(ScreenNames.HOME);
     } catch (error) {
       console.error('Error saving onboarding status:', error);

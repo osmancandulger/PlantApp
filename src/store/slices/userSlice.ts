@@ -4,11 +4,13 @@ import { User } from '../../types';
 interface UserState {
   currentUser: User | null;
   isAuthenticated: boolean;
+  hasCompletedOnboarding: boolean;
 }
 
 const initialState: UserState = {
   currentUser: null,
   isAuthenticated: false,
+  hasCompletedOnboarding: false,
 };
 
 const userSlice = createSlice({
@@ -27,9 +29,16 @@ const userSlice = createSlice({
     logout: (state) => {
       state.currentUser = null;
       state.isAuthenticated = false;
+      state.hasCompletedOnboarding = false;
+    },
+    setOnboardingCompleted: (state, action: PayloadAction<boolean>) => {
+      state.hasCompletedOnboarding = action.payload;
+      if (state.currentUser) {
+        state.currentUser.hasCompletedOnboarding = action.payload;
+      }
     },
   },
 });
 
-export const { setUser, updateUser, logout } = userSlice.actions;
+export const { setUser, updateUser, logout, setOnboardingCompleted } = userSlice.actions;
 export default userSlice.reducer;
