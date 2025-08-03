@@ -43,16 +43,19 @@ const PayWall: React.FC = () => {
 
   const features = [
     {
+      id: 'unlimited',
       title: t('paywall.content.feature.unlimited.title'),
       subtitle: t('paywall.content.feature.unlimited.subtitle'),
       icon: 'scanner',
     },
     {
+      id: 'faster',
       title: t('paywall.content.feature.faster.title'),
       subtitle: t('paywall.content.feature.faster.subtitle'),
       icon: 'gauge',
     },
     {
+      id: 'detailed',
       title: t('paywall.content.feature.detailed.title'),
       subtitle: t('paywall.content.feature.detailed.subtitle'),
       icon: 'leaves',
@@ -132,7 +135,7 @@ const PayWall: React.FC = () => {
                 contentContainerStyle={styles.featuresScrollContent}
               >
                 {features.map((feature) => (
-                  <View style={styles.featureCard}>
+                  <View style={styles.featureCard} key={feature.id}>
                     <View style={styles.featureIconContainer}>
                       <SvgIcon name={feature.icon} />
                     </View>
@@ -148,7 +151,6 @@ const PayWall: React.FC = () => {
                 ))}
               </ScrollView>
               <View style={styles.subscriptionOptionsContainer}>
-                {/* TODO: Add LinearGradient */}
                 {subscriptionOptions.map((option) => (
                   <TouchableOpacity
                     key={option.id}
