@@ -46,15 +46,14 @@ const Home: React.FC = () => {
         <View style={styles.headerContainer}>
           <View style={styles.headerWrapper}>
             <Row style={styles.leafContainer}>
-              <Image source={require('../../../assets/images/leaf.png')} style={styles.brush} />
-              <Image source={require('../../../assets/images/leaves.png')} style={styles.brush} />
+              <Image source={require('../../../assets/images/leaf.png')} />
+              <Image source={require('../../../assets/images/leaves.png')} />
             </Row>
             <View style={styles.header}>
               <Typography style={styles.headerTitle}>{t('home.header.title')}</Typography>
               <Typography style={styles.headerGreetingText}>{getGreeting()}</Typography>
             </View>
 
-            {/* Search */}
             <View style={styles.searchContainer}>
               <Input
                 containerStyle={styles.searchInput}
@@ -67,7 +66,11 @@ const Home: React.FC = () => {
           </View>
         </View>
         <View style={styles.contentWrapper}>
-          <TouchableOpacity style={css(styles.premiumBanner)} onPress={() => {}}>
+          <TouchableOpacity
+            style={css(styles.premiumBanner)}
+            onPress={() => {}}
+            activeOpacity={0.8}
+          >
             <View style={styles.premiumContent}>
               <Row style={styles.premiumContentWrapper}>
                 <View style={styles.iconContainer}>

@@ -23,6 +23,7 @@ const HorizontalCards: React.FC<HorizontalCardsProps> = ({
       key={item.id}
       style={css([styles.card, cardStyle])}
       onPress={() => onPressItem?.(item)}
+      activeOpacity={0.8}
     >
       <ImageBackground
         source={{ uri: item.image_uri }}

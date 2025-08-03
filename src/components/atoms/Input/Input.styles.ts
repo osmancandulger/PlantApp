@@ -27,6 +27,8 @@ export default function () {
       overflow: hidden;
       padding-horizontal: 16px;
       height: ${getResponsiveHeight(44)}px;
+      background-color: ${theme.color.white};
+      opacity: 0.85;
     `;
 
     style.input = `

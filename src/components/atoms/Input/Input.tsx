@@ -31,13 +31,7 @@ const Input: React.FC<InputProps> = ({
   const containerBaseStyle = enableBlur ? styles.blurContainer : styles.container;
 
   return (
-    <View
-      style={css([
-        containerBaseStyle,
-        enableBlur && { backgroundColor: 'rgba(255, 255, 255, 0.1)' },
-        containerStyle,
-      ])}
-    >
+    <View style={css([containerBaseStyle, enableBlur && styles.blurContainer, containerStyle])}>
       {!leftItem ? leftItemIcon() : <View style={styles.leftItemContainer}>{leftItem}</View>}
       <TextInput
         style={css([styles.input, inputStyle, style])}
