@@ -15,6 +15,7 @@ const Navigation: React.FC = () => {
 
   const checkOnboardingStatus = useCallback(async () => {
     try {
+      await AsyncStorage.clear();
       const onboardingCompleted = await AsyncStorage.getItem('onboardingCompleted');
       const completed = onboardingCompleted === 'true';
       dispatch(setOnboardingCompleted(completed));

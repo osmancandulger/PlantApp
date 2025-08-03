@@ -19,17 +19,13 @@ export default function useRouting(): Routings {
 
   const routings: Routings = {
     push: (route, props) => {
-      if (navigationRef.isReady()) {
-        navigation.navigate(route, props);
-      }
+      navigation.navigate(route, props);
     },
     replace: (route, props) => {
-      if (navigationRef.isReady()) {
-        navigationRef.dispatch(StackActions.replace(route as string, props));
-      }
+      navigationRef.dispatch(StackActions.replace(route as string, props));
     },
     goBack: () => {
-      if (navigationRef.isReady() && navigationRef.canGoBack()) {
+      if (navigationRef.canGoBack()) {
         navigationRef.goBack();
       }
     },
