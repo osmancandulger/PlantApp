@@ -46,40 +46,6 @@ function getVariantStyles(variant: string): string {
   }
 }
 
-function getColorStyles(color: string, isDark: boolean): string {
-  if (isDark) {
-    switch (color) {
-      case 'primary':
-        return 'color: #FFFFFF;';
-      case 'secondary':
-        return 'color: #CCCCCC;';
-      case 'white':
-        return 'color: #FFFFFF;';
-      case 'gray':
-        return 'color: #888888;';
-      case 'success':
-        return 'color: #28AF6E;';
-      default:
-        return 'color: #FFFFFF;';
-    }
-  } else {
-    switch (color) {
-      case 'primary':
-        return 'color: #1A1A1A;';
-      case 'secondary':
-        return 'color: #666666;';
-      case 'white':
-        return 'color: #FFFFFF;';
-      case 'gray':
-        return 'color: #999999;';
-      case 'success':
-        return 'color: #28AF6E;';
-      default:
-        return 'color: #1A1A1A;';
-    }
-  }
-}
-
 function getAlignStyles(align: string): string {
   switch (align) {
     case 'left':

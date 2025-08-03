@@ -1,7 +1,6 @@
 import React from 'react';
 import { ScreenNames } from ':enums/screens';
-import { HomeScreen, DiagnoseScreen, MyGardenScreen, ProfileScreen } from ':pages/';
-import { Text } from 'react-native';
+import { HomeScreen, DiagnoseScreen, MyGardenScreen, ScannerScreen, ProfileScreen } from ':pages/';
 type TabScreenDefinitionType = {
   name: string;
   title: string;
@@ -27,9 +26,20 @@ export const TabScreenRegistry: TabScreenDefinitionType[] = [
     name: ScreenNames.DIAGNOSE,
     title: 'Diagnose',
     setAsIndex: false,
-    tabBarIcon: 'search',
+    tabBarIcon: 'diagnose',
     tabBarLabel: 'Diagnose',
     component: DiagnoseScreen,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: 'Scanner',
+    title: 'Scanner',
+    setAsIndex: false,
+    tabBarIcon: 'scanner',
+    tabBarLabel: '',
+    component: ScannerScreen, // Temporary, scanner functionality goes to diagnose
     options: {
       headerShown: false,
     },
@@ -49,7 +59,7 @@ export const TabScreenRegistry: TabScreenDefinitionType[] = [
     name: ScreenNames.PROFILE,
     title: 'Profile',
     setAsIndex: false,
-    tabBarIcon: 'user',
+    tabBarIcon: 'profile',
     tabBarLabel: 'Profile',
     component: ProfileScreen,
     options: {

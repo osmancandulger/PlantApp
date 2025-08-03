@@ -30,5 +30,11 @@
   "home.header.greeting.night": "Good Night 🌙",
   "home.premiumbanner.title": "FREE Premium Available",
   "home.premiumbanner.subtitle": "Tap to upgrade your account!",
-  "home.get-started.title": "Get Started"
+  "home.get-started.title": "Get Started",
+  "diagnose.screen.title": "Diagnose",
+  "home.screen.title": "Home",
+  "my-garden.screen.title": "My Garden",
+  "scanner.screen.title": "Scanner",
+  "profile.screen.title": "Profile",
+  "common.coming-soon.label": "Coming Soon"
 }

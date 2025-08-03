@@ -32,6 +32,7 @@ declare module '@emotion/react' {
       black300: string;
       bakgroundSecondary: string;
       borderGreen: string;
+      tabBarActiveTintColor: string;
     };
   }
 }

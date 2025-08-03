@@ -1,4 +1,3 @@
-// SvgIcon.tsx
 import React from 'react';
 import { ViewStyle } from 'react-native';
 import Scanner from '../../../assets/icons/scanner.svg';
@@ -7,6 +6,10 @@ import Leaves from '../../../assets/icons/leaves.svg';
 import Search from '../../../assets/icons/search.svg';
 import Envelope from '../../../assets/icons/envelope.svg';
 import ChevronRight from '../../../assets/icons/chevron-right.svg';
+import Home from '../../../assets/tab-nav-icons/home.svg';
+import Diagnose from '../../../assets/tab-nav-icons/diagnose.svg';
+import Profile from '../../../assets/tab-nav-icons/profile.svg';
+import Garden from '../../../assets/tab-nav-icons/garden.svg';
 interface SvgIconProps {
   name: string;
   width?: number;
@@ -23,6 +26,10 @@ const SvgIcon: React.FC<SvgIconProps> = ({ name, width = 24, height = 24, color,
     search: Search,
     envelope: Envelope,
     chevronRight: ChevronRight,
+    home: Home,
+    diagnose: Diagnose,
+    profile: Profile,
+    garden: Garden,
   } as const;
   const IconComponent = Icons[name];
 

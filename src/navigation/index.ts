@@ -6,9 +6,9 @@ import SecureStackNavigation from './secure/StackNavigator';
 const Navigation: React.FC = () => {
   const [hasCompletedOnboarding, setHasCompletedOnboarding] = useState<boolean | null>(null);
 
-  useEffect(() => {
-    checkOnboardingStatus();
-  }, []);
+  // useEffect(() => {
+  //   checkOnboardingStatus();
+  // }, []);
 
   const checkOnboardingStatus = async () => {
     try {
@@ -26,7 +26,7 @@ const Navigation: React.FC = () => {
   // }
 
   // Show secure (tabs) or nonsecure (onboarding) navigation
-  if (false) {
+  if (true) {
     return SecureStackNavigation();
   }
   return NonSecureStackNavigation();

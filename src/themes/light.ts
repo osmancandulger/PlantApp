@@ -28,6 +28,7 @@ export const theme: Theme = {
     black300: colors.black300,
     bakgroundSecondary: colors.lightGray,
     borderGreen: colors.transparentGreen,
+    tabBarActiveTintColor: colors.textGreen,
   },
 };
 

@@ -10,8 +10,10 @@ export type OnboardingStackParamList = {
 };
 
 export type TabNavigatorParamList = {
+  index: undefined;
   Home: undefined;
   Diagnose: undefined;
+  Scanner: undefined;
   MyGarden: undefined;
   Profile: undefined;
 };
