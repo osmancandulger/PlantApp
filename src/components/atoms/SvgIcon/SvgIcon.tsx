@@ -10,6 +10,7 @@ import Home from '../../../assets/tab-nav-icons/home.svg';
 import Diagnose from '../../../assets/tab-nav-icons/diagnose.svg';
 import Profile from '../../../assets/tab-nav-icons/profile.svg';
 import Garden from '../../../assets/tab-nav-icons/garden.svg';
+import Close from '../../../assets/icons/close.svg';
 import Scan from '../../../assets/tab-nav-icons/scanner.svg';
 interface SvgIconProps {
   name: string;
@@ -31,9 +32,10 @@ const SvgIcon: React.FC<SvgIconProps> = ({ name, width = 24, height = 24, color,
     diagnose: Diagnose,
     profile: Profile,
     garden: Garden,
+    close: Close,
     scanTabIcon: Scan,
   } as const;
-  const IconComponent = Icons[name];
+  const IconComponent = Icons[name as keyof typeof Icons];
 
   if (!IconComponent) {
     console.warn(`Icon "${name}" not found`);

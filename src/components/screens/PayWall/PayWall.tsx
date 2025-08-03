@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable react/no-unstable-nested-components */
+import React, { useLayoutEffect, useState } from 'react';
 import { Image, ScrollView, TouchableOpacity } from 'react-native';
 
 import { Screen, Typography, View, SvgIcon, Button } from ':atoms/';
@@ -10,29 +11,41 @@ import { Trans } from 'react-i18next';
 import { t } from 'i18next';
 import { ScreenNames } from ':enums/screens';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import useRouting from ':hooks/useRoutings';
+import useRouting, { navigationRef } from ':hooks/useRoutings';
 import { useDispatch } from 'react-redux';
 import { setOnboardingCompleted } from ':store/slices/userSlice';
+import { useNavigation } from '@react-navigation/native';
 
 const PayWall: React.FC = () => {
   const styles = useStyleSheet(initialStyle());
   const { replace } = useRouting();
   const dispatch = useDispatch();
-
+  const navigation = useNavigation();
   const handleOnTapContinue = async () => {
     try {
-      // Update AsyncStorage
       await AsyncStorage.setItem('onboardingCompleted', 'true');
-
-      // Update Redux state
       dispatch(setOnboardingCompleted(true));
-
-      // Navigate to secure navigation (will auto-redirect to tabs)
-      replace(ScreenNames.HOME);
+      // replace(ScreenNames.HOME);
     } catch (error) {
       console.error('Error saving onboarding status:', error);
     }
   };
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerLeft: () => <></>,
+      headerRight: () => (
+        <TouchableOpacity
+          // eslint-disable-next-line react-native/no-inline-styles
+          style={css(styles.closeButton)}
+          onPress={() => {
+            handleOnTapContinue();
+          }}
+        >
+          <Typography style={styles.closeButtonText}>x</Typography>
+        </TouchableOpacity>
+      ),
+    });
+  }, [navigation]);
 
   const features = [
     {

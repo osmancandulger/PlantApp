@@ -271,6 +271,21 @@ export default function () {
       margin-horizontal: 8px;
     `;
 
+    style.closeButton = `
+       width: 24px;
+       height: 24px;
+       border-radius: 12px;
+       background-color: ${theme.color.primary};
+       opacity: 0.6;
+       justify-content: center;
+       align-items: center;
+       margin-right: 16px;
+    `;
+    style.closeButtonText = `
+      color: ${theme.color.white};
+      font-size: ${scaleFontSize(16)}px;
+      font-weight: ${FontWeight.MEDIUM};
+    `;
     return style;
   };
 }

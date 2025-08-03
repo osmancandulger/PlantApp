@@ -24,13 +24,14 @@ export const ScreenRegistry: NavigationScreenProps[] = [
       headerShown: false,
     },
   },
-
   {
     name: ScreenNames.PAYWALL,
     component: PayWallScreen,
     options: {
+      headerTransparent: true,
+      headerBackVisible: false,
       title: '',
-      headerShown: false,
+      headerShown: true,
     },
   },
 ];
