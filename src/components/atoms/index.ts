@@ -19,3 +19,7 @@ export { default as ScrollView } from './ScrollView';
 
 export { default as SvgIcon } from './SvgIcon';
 export { default as LinearGradient } from './LinearGradient';
+
+export { default as Input } from './Input';
+
+export { default as GradientText } from './GradientText';

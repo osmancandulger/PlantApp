@@ -3,3 +3,8 @@ export enum ThemeType {
   DARK = 'dark',
   SYSTEM = 'system',
 }
+export enum InputType {
+  SEARCH = 'search',
+  DEFAULT = 'default',
+  PASSWORD = 'password',
+}

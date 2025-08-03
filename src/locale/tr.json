@@ -22,5 +22,13 @@
   "paywall.content.footer.subscription-notice.text": "After the 3-day free trial period you’ll be charged ₺274.99 per year unless you cancel before the trial expires. Yearly Subscription is Auto-Renewable",
   "paywall.content.footer.terms.title": "Terms",
   "paywall.content.footer.privacy.title": "Privacy",
-  "paywall.content.footer.restore.title": "Restore"
+  "paywall.content.footer.restore.title": "Restore",
+  "home.header.title": "Hi, plant lover!",
+  "home.header.greeting.morning": "Good Morning ☀️",
+  "home.header.greeting.afternoon": "Good Afternoon 🌤️",
+  "home.header.greeting.evening": "Good Evening 🌆",
+  "home.header.greeting.night": "Good Night 🌙",
+  "home.premiumbanner.title": "FREE Premium Available",
+  "home.premiumbanner.subtitle": "Tap to upgrade your account!",
+  "home.get-started.title": "Get Started"
 }

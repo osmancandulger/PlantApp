@@ -18,6 +18,20 @@ declare module '@emotion/react' {
       shadowGreen: string;
       lightBlack: string;
       noirGreen: string;
+      whiteLight: string;
+      borderMuted: string;
+      labelMuted: string;
+      offWhite: string;
+      yellow: string;
+      darkYellow: string;
+      mildYellow: string;
+      mediumYellow: string;
+      red: string;
+      blackOliveBanner: string;
+      pastelYellow: string;
+      black300: string;
+      bakgroundSecondary: string;
+      borderGreen: string;
     };
   }
 }
