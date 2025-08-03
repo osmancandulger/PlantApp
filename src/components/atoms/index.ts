@@ -10,10 +10,11 @@ export type {
 } from './Typography';
 
 export { default as Screen } from './Screen';
-export type { ScreenProps, StatusBarStyle } from './Screen';
 
 export { default as View } from './View';
-export type { ViewProps } from './View';
 
 export { default as Row } from './Row';
-export type { RowProps } from './Row';
+
+export { default as ScrollView } from './ScrollView';
+
+export { default as SvgIcon } from './SvgIcon';

@@ -1,18 +1,21 @@
+import { scaleFontSize } from ':utils';
 import { StyleSheet } from '@emotion/primitives';
+import { Theme } from '@emotion/react';
+import { FontWeight } from ':constants/typography';
 
 export default function (
   variant: string = 'body1',
   color: string = 'primary',
   align: string = 'left',
 ) {
-  return function (isDark: boolean) {
+  return function (theme: Theme) {
     const style: StyleSheet.NamedStyles = {};
 
     style.text = `
-      font-family: System;
+      font-family: Rubik;
       ${getVariantStyles(variant)}
-      ${getColorStyles(color, isDark)}
       ${getAlignStyles(align)}
+      color: ${theme.color.textPrimay};
     `;
 
     return style;
@@ -22,25 +25,24 @@ export default function (
 function getVariantStyles(variant: string): string {
   switch (variant) {
     case 'h1':
-      return 'font-size: 32px; font-weight: 700; line-height: 40px;';
+      return `font-size: ${scaleFontSize(32)}px; font-weight: ${FontWeight.BOLD};`;
     case 'h2':
-      return 'font-size: 28px; font-weight: 600; line-height: 36px;';
+      return `font-size: ${scaleFontSize(28)}px; font-weight: 600;`;
     case 'h3':
-      return 'font-size: 24px; font-weight: 600; line-height: 32px;';
-    case 'subtitle1':
-      return 'font-size: 20px; font-weight: 500; line-height: 28px;';
-    case 'subtitle2':
-      return 'font-size: 18px; font-weight: 500; line-height: 24px;';
+      return `font-size: ${scaleFontSize(24)}px; font-weight: 600;`;
+
     case 'body1':
-      return 'font-size: 16px; font-weight: 400; line-height: 24px;';
+      return `font-size: ${scaleFontSize(16)}px; font-weight: 400;`;
     case 'body2':
-      return 'font-size: 14px; font-weight: 400; line-height: 20px;';
+      return `font-size: ${scaleFontSize(14)}px; font-weight: 400;`;
     case 'caption':
-      return 'font-size: 12px; font-weight: 400; line-height: 16px;';
+      return `font-size: ${scaleFontSize(12)}px; font-weight: 400;`;
     case 'button':
-      return 'font-size: 16px; font-weight: 600; line-height: 20px;';
+      return `font-size: ${scaleFontSize(16)}px; font-weight: 600;`;
+    case 'regular':
+      return `font-size: ${scaleFontSize(16)}px; font-weight: 400;`;
     default:
-      return 'font-size: 16px; font-weight: 400; line-height: 24px;';
+      return `font-size: ${scaleFontSize(16)}px; font-weight: 400;`;
   }
 }
 

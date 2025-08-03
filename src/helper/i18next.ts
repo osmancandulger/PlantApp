@@ -8,7 +8,7 @@ export const resources = {
   tr: { translation: tr },
 };
 i18next.use(initReactI18next).init({
-  compatibilityJSON: 'v3',
+  compatibilityJSON: 'v4',
   lng: 'tr',
   fallbackLng: 'tr',
   resources: resources,
