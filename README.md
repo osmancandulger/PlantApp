@@ -26,6 +26,19 @@ A modern React Native mobile application designed to help users identify, care f
 - **Testing**: Jest + React Native Testing Library
 - **Internationalization**: i18next
 
+
+### Prerequisites
+
+- Node.js >= 18
+- React Native CLI
+- Android Studio (for Android development)
+- Xcode (for iOS development)
+
+
+## 🚀 Getting Started
+
+> **📖 Need help setting up your environment?** Check [Environment Setup Guide](docs/environment-setup.md) for detailed instructions.
+
 ### Project Structure
 
 ```
@@ -45,16 +58,6 @@ src/
 └── locale/            # Internationalization files
 ```
 
-## 🚀 Getting Started
-
-> **📖 Need help setting up your environment?** Check [Environment Setup Guide](docs/environment-setup.md) for detailed instructions.
-
-### Prerequisites
-
-- Node.js >= 18
-- React Native CLI
-- Android Studio (for Android development)
-- Xcode (for iOS development)
 
 ### Installation
 
