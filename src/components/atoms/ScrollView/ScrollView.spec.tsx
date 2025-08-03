@@ -3,7 +3,6 @@ import { render, fireEvent } from '@testing-library/react-native';
 import ScrollView from './ScrollView';
 import View from '../View';
 
-// Mock dependencies
 jest.mock('../../../hooks/useStyleSheet', () => jest.fn(() => ({ scrollView: {} })));
 
 describe('ScrollView', () => {

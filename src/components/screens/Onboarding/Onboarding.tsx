@@ -5,11 +5,12 @@ import useStyleSheet from ':hooks/useStyleSheet';
 import initialStyle from './Onboarding.styles';
 import useRouting from ':hooks/useRoutings';
 import { ScreenNames } from ':enums/screens';
-import Carousel, { PaginationIndicator, CarouselRef } from ':molecules/Carousel';
+import { Carousel, PaginationIndicator } from ':molecules/';
 import { Trans } from 'react-i18next';
 import { Image } from 'react-native';
 import { css } from '@emotion/native';
 import { t } from 'i18next';
+import { CarouselRef } from ':components/molecules/Carousel';
 
 const Onboarding: React.FC = () => {
   const styles = useStyleSheet(initialStyle());

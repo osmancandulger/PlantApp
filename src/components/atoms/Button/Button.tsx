@@ -4,7 +4,8 @@ import { css } from '@emotion/native';
 import { ButtonProps } from '.';
 import useStyleSheet from ':hooks/useStyleSheet';
 import initialStyle from './Button.styles';
-import { TouchableOpacity } from ':atoms/';
+import TouchableOpacity from '../TouchableOpacity';
+
 const Button: React.FC<ButtonProps> = ({
   title,
   onPress,

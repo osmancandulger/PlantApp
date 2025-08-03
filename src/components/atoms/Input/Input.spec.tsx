@@ -3,7 +3,6 @@ import { render, fireEvent } from '@testing-library/react-native';
 import Input from './Input';
 import View from '../View';
 
-// Mock dependencies
 jest.mock('../../../hooks/useStyleSheet', () =>
   jest.fn(() => ({
     container: {},

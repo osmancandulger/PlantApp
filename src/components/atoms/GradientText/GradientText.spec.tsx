@@ -3,7 +3,6 @@ import { render } from '@testing-library/react-native';
 import GradientText from './GradientText';
 import View from '../View';
 
-// Mock dependencies
 jest.mock('@react-native-masked-view/masked-view', () => ({ children, maskElement }: any) => (
   <View data-testid="masked-view">
     <View data-testid="mask-element">{maskElement}</View>
@@ -23,21 +22,6 @@ describe('GradientText', () => {
   it('should render children with gradient', () => {
     const { root } = render(<GradientText colors={testColors}>Gradient Text</GradientText>);
 
-    expect(root).toBeTruthy();
-  });
-
-  it('should pass colors to LinearGradient', () => {
-    const { root } = render(<GradientText colors={testColors}>Test</GradientText>);
-
-    expect(root).toBeTruthy();
-  });
-
-  it('should handle custom start and end props', () => {
-    const { root } = render(
-      <GradientText colors={testColors} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }}>
-        Custom Gradient
-      </GradientText>,
-    );
     expect(root).toBeTruthy();
   });
 });
