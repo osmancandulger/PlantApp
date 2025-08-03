@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScreenNames } from ':enums/screens';
 import { Text } from 'react-native';
+import { SettingsScreen } from ':pages/';
 
 type NavigationScreenProps = {
   name: string;
@@ -10,8 +11,8 @@ type NavigationScreenProps = {
 
 export const SecureScreenRegistry: NavigationScreenProps[] = [
   {
-    name: '',
-    component: null,
+    name: ScreenNames.SETTINGS,
+    component: SettingsScreen,
     options: {
       headerTitleStyle: { fontSize: 18 },
       title: '',

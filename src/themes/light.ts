@@ -28,7 +28,10 @@ export const theme: Theme = {
     black300: colors.black300,
     bakgroundSecondary: colors.lightGray,
     borderGreen: colors.transparentGreen,
-    tabBarActiveTintColor: colors.textGreen,
+    tabBarActiveTintColor: colors.emerald,
+    grayLight: colors.gray200,
+    tabNavBorder: colors.whiteGray,
+    secondaryGreen: colors.mintGreen,
   },
 };
 

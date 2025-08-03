@@ -26,5 +26,7 @@ export default {
   black300: '#00000033',
   lightGray: '#F9FFFA',
   transparentGreen: '#29BB892E',
-  textGreen: '#28AF6E',
+  gray200: '#ADB5BD',
+  whiteGray: '#F1F3F4',
+  mintGreen: '#2CCC80',
 };

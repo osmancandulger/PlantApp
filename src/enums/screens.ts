@@ -7,4 +7,5 @@ export enum ScreenNames {
   MY_GARDEN = 'MyGarden',
   PROFILE = 'Profile',
   SETTINGS = 'Settings',
+  SCANNER = 'Scanner',
 }

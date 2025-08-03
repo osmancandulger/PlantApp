@@ -37,9 +37,9 @@ export const TabScreenRegistry: TabScreenDefinitionType[] = [
     name: 'Scanner',
     title: 'Scanner',
     setAsIndex: false,
-    tabBarIcon: 'scanner',
+    tabBarIcon: 'scanTabIcon',
     tabBarLabel: '',
-    component: ScannerScreen, // Temporary, scanner functionality goes to diagnose
+    component: ScannerScreen,
     options: {
       headerShown: false,
     },
