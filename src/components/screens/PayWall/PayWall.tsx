@@ -195,7 +195,7 @@ const PayWall: React.FC = () => {
               <View style={styles.footerContainer}>
                 <Button
                   title={t('paywall.content.footer.button.title')}
-                  onPress={handleOnTapContinue}
+                  onPress={() => null}
                   style={styles.footerButton}
                   textStyle={styles.footerButtonText}
                 />
