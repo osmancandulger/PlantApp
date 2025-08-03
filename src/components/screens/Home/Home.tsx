@@ -9,40 +9,23 @@ import { css } from '@emotion/native';
 import { InputType } from ':enums/common';
 import { useTheme } from '@emotion/react';
 import { getResponsiveHeight, getResponsiveWidth } from ':utils';
-import categoriesData from './categories.json';
+import { useGetCategoriesQuery, useGetQuestionsQuery } from ':store/slices/apiSlice';
 const NOTIFICATION_COUNT = 1;
-const data = [
-  {
-    id: 1,
-    title: 'How to identify plants?',
-    // subtitle: 'Life Style',
-    image_uri:
-      'https://firebasestorage.googleapis.com/v0/b/flora---plant-identifier.appspot.com/o/public%2FCard.png?alt=media',
-    uri: 'https://plantapp.app/blog/identifying-plant-in-10-steps/',
-    order: 1,
-  },
-  {
-    id: 2,
-    title: 'Differences Between Species and Varieties?',
-    // subtitle: 'Plant Identify',
-    image_uri:
-      'https://firebasestorage.googleapis.com/v0/b/flora---plant-identifier.appspot.com/o/public%2Fcard2.png?alt=media',
-    uri: 'https://plantapp.app/blog/differences-between-species-and-varieties/',
-    order: 2,
-  },
-  {
-    id: 3,
-    title: 'The reasons why the same plant can look different?',
-    // subtitle: 'Life Style',
-    image_uri:
-      'https://firebasestorage.googleapis.com/v0/b/flora---plant-identifier.appspot.com/o/public%2FCard3.png?alt=media',
-    uri: 'https://plantapp.app/blog/same-seeds-but-different-looking-plants/',
-    order: 3,
-  },
-];
 const Home: React.FC = () => {
   const theme = useTheme();
   const styles = useStyleSheet(initialStyle());
+
+  const {
+    data: categoriesData,
+    isLoading: categoriesLoading,
+    error: categoriesError,
+  } = useGetCategoriesQuery();
+
+  const {
+    data: questionsData,
+    isLoading: questionsLoading,
+    error: questionsError,
+  } = useGetQuestionsQuery();
   const getGreeting = (): string => {
     const hour = new Date().getHours();
 
@@ -60,7 +43,6 @@ const Home: React.FC = () => {
   return (
     <Screen backgroundColor="#FFFFFF">
       <ScrollView style={css(styles.container)} showsVerticalScrollIndicator={false}>
-        {/* Header */}
         <View style={styles.headerContainer}>
           <View style={styles.headerWrapper}>
             <Row style={styles.leafContainer}>
@@ -85,7 +67,6 @@ const Home: React.FC = () => {
           </View>
         </View>
         <View style={styles.contentWrapper}>
-          {/* Premium Banner */}
           <TouchableOpacity style={css(styles.premiumBanner)} onPress={() => {}}>
             <View style={styles.premiumContent}>
               <Row style={styles.premiumContentWrapper}>
@@ -132,33 +113,38 @@ const Home: React.FC = () => {
           </TouchableOpacity>
 
           <View style={styles.section}>
-            <Typography style={styles.sectionTitle}>{t('home.get-started.title')}</Typography>
+            <Typography variant="subtitle1" color="primary" style={styles.sectionTitle}>
+              {t('home.get-started.title')}
+            </Typography>
 
-            <HorizontalCards
-              data={data}
-              onPressItem={(item: CardItem) => {
-                console.log('Selected item:', item);
-              }}
-            />
+            {questionsData && (
+              <HorizontalCards
+                data={questionsData}
+                onPressItem={(item: CardItem) => {
+                  console.log('Selected item:', item);
+                }}
+              />
+            )}
           </View>
 
           <View style={styles.section}>
             <View style={styles.categoryGrid}>
-              {categoriesData.data.map((item) => {
-                return (
-                  <View style={styles.categoryCard} key={item.id}>
-                    <View style={styles.categoryImage}>
-                      <ImageBackground
-                        source={{ uri: item.image.url }}
-                        style={css([styles.cardImage])}
-                        resizeMode="cover"
-                      >
-                        <Typography style={styles.categoryTitle}>{item.title}</Typography>
-                      </ImageBackground>
+              {categoriesData &&
+                categoriesData?.data.map((item) => {
+                  return (
+                    <View style={styles.categoryCard} key={item.id}>
+                      <View style={styles.categoryImage}>
+                        <ImageBackground
+                          source={{ uri: item.image.url }}
+                          style={css([styles.cardImage])}
+                          resizeMode="cover"
+                        >
+                          <Typography style={styles.categoryTitle}>{item.title}</Typography>
+                        </ImageBackground>
+                      </View>
                     </View>
-                  </View>
-                );
-              })}
+                  );
+                })}
             </View>
           </View>
         </View>
