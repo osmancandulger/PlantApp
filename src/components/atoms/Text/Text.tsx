@@ -1,13 +1,13 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text as RNText } from 'react-native';
 import { css } from '@emotion/native';
-import { TypographyProps } from '.';
+import { TextProps } from '.';
 import useStyleSheet from ':hooks/useStyleSheet';
-import initialStyle from './Typography.styles';
+import initialStyle from './Text.styles';
 
-const Typography: React.FC<TypographyProps> = ({
+const Text: React.FC<TextProps> = ({
   children,
-  variant = 'body1',
+  variant = 'body',
   color = 'primary',
   align = 'left',
   style,
@@ -16,10 +16,10 @@ const Typography: React.FC<TypographyProps> = ({
   const styles = useStyleSheet(initialStyle(variant, color, align));
 
   return (
-    <Text style={css([styles.text, style])} {...props}>
+    <RNText style={css([styles.text, style])} {...props}>
       {children}
-    </Text>
+    </RNText>
   );
 };
 
-export default Typography;
+export default Text;

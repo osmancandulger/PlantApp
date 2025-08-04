@@ -1,15 +1,6 @@
 import React, { useMemo } from 'react';
 import { Image, ImageBackground, ScrollView } from 'react-native';
-import {
-  Screen,
-  Typography,
-  View,
-  Input,
-  Row,
-  GradientText,
-  SvgIcon,
-  TouchableOpacity,
-} from ':atoms/';
+import { Screen, Text, View, Input, Row, GradientText, SvgIcon, TouchableOpacity } from ':atoms/';
 import { HorizontalCards } from ':molecules/';
 import { CardItem } from ':molecules/HorizontalCards/types';
 import useStyleSheet from ':hooks/useStyleSheet';
@@ -62,8 +53,8 @@ const Home: React.FC = () => {
               <Image source={require('../../../assets/images/leaves.png')} />
             </Row>
             <View style={styles.header}>
-              <Typography style={styles.headerTitle}>{t('home.header.title')}</Typography>
-              <Typography style={styles.headerGreetingText}>{getGreeting()}</Typography>
+              <Text style={styles.headerTitle}>{t('home.header.title')}</Text>
+              <Text style={styles.headerGreetingText}>{getGreeting()}</Text>
             </View>
 
             <View style={styles.searchContainer}>
@@ -89,7 +80,7 @@ const Home: React.FC = () => {
                     style={styles.envelopeIcon}
                   />
                   <View style={styles.badge}>
-                    <Typography style={styles.badgeText}>{NOTIFICATION_COUNT}</Typography>
+                    <Text style={styles.badgeText}>{NOTIFICATION_COUNT}</Text>
                   </View>
                 </View>
                 <View style={styles.textContentWrapper}>
@@ -99,18 +90,14 @@ const Home: React.FC = () => {
                     end={{ x: 1, y: 0 }}
                     style={styles.premiumTitleGradient}
                   >
-                    <Typography style={styles.premiumTitle}>
-                      {t('home.premiumbanner.title')}
-                    </Typography>
+                    <Text style={styles.premiumTitle}>{t('home.premiumbanner.title')}</Text>
                   </GradientText>
                   <GradientText
                     colors={[theme.color.yellow, theme.color.darkYellow]}
                     start={{ x: 1, y: 0.5 }}
                     end={{ x: 0, y: 0.5 }}
                   >
-                    <Typography style={styles.premiumSubtitle}>
-                      {t('home.premiumbanner.subtitle')}
-                    </Typography>
+                    <Text style={styles.premiumSubtitle}>{t('home.premiumbanner.subtitle')}</Text>
                   </GradientText>
                 </View>
                 <SvgIcon
@@ -124,9 +111,9 @@ const Home: React.FC = () => {
           </TouchableOpacity>
 
           <View style={styles.section}>
-            <Typography variant="subtitle1" color="primary" style={styles.sectionTitle}>
+            <Text variant="subtitle1" color="primary" style={styles.sectionTitle}>
               {t('home.get-started.title')}
-            </Typography>
+            </Text>
 
             {sortedQuestionsData && (
               <HorizontalCards
@@ -159,7 +146,7 @@ const Home: React.FC = () => {
                           style={css([styles.cardImage])}
                           resizeMode="cover"
                         >
-                          <Typography style={styles.categoryTitle}>{item.title}</Typography>
+                          <Text style={styles.categoryTitle}>{item.title}</Text>
                         </ImageBackground>
                       </View>
                     </TouchableOpacity>

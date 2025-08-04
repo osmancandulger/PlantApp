@@ -24,8 +24,6 @@ export default function () {
     `;
 
     style.titleBold = `
-      font-size: ${scaleFontSize(28)}px;
-      font-weight: ${FontWeight.SEMI_BOLD};
       letter-spacing: ${LetterSpacing.TIGHT_07}px;
     `;
 

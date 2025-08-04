@@ -4,7 +4,7 @@ import { Theme } from '@emotion/react';
 import { FontWeight } from ':constants/typography';
 
 export default function (
-  variant: string = 'body1',
+  variant: string = 'body',
   color: string = 'primary',
   align: string = 'left',
 ) {
@@ -26,15 +26,10 @@ function getVariantStyles(variant: string): string {
   switch (variant) {
     case 'h1':
       return `font-size: ${scaleFontSize(32)}px; font-weight: ${FontWeight.BOLD};`;
-    case 'h2':
+    case 'heading':
       return `font-size: ${scaleFontSize(28)}px; font-weight: 600;`;
-    case 'h3':
-      return `font-size: ${scaleFontSize(24)}px; font-weight: 600;`;
-
-    case 'body1':
+    case 'body':
       return `font-size: ${scaleFontSize(16)}px; font-weight: 400;`;
-    case 'body2':
-      return `font-size: ${scaleFontSize(14)}px; font-weight: 400;`;
     case 'caption':
       return `font-size: ${scaleFontSize(12)}px; font-weight: 400;`;
     case 'button':

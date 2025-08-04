@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React, { useLayoutEffect, useState } from 'react';
 import { Image, ScrollView } from 'react-native';
-import { Screen, Typography, View, SvgIcon, Button, TouchableOpacity } from ':atoms/';
+import { Screen, Text, View, SvgIcon, Button, TouchableOpacity } from ':atoms/';
 import useStyleSheet from ':hooks/useStyleSheet';
 import initialStyle from './PayWall.styles';
 import { css } from '@emotion/native';
@@ -35,7 +35,7 @@ const PayWall: React.FC = () => {
             handleOnTapContinue();
           }}
         >
-          <Typography style={styles.closeButtonText}>x</Typography>
+          <Text style={styles.closeButtonText}>x</Text>
         </TouchableOpacity>
       ),
     });
@@ -70,18 +70,18 @@ const PayWall: React.FC = () => {
       isPopular: false,
       isSelected: false,
       CustomSubTitle: (
-        <Typography style={styles.subscriptionSubtitleLight}>
+        <Text style={styles.subscriptionSubtitleLight}>
           <Trans
             i18nKey="paywall.content.subscription.1_month.subtitle"
             components={{
               bold: (
-                <Typography variant="h1" style={styles.subscriptionSubtitleBold}>
+                <Text style={styles.subscriptionSubtitleBold}>
                   <></>
-                </Typography>
+                </Text>
               ),
             }}
           />
-        </Typography>
+        </Text>
       ),
     },
     {
@@ -109,24 +109,19 @@ const PayWall: React.FC = () => {
         <View style={styles.overlay}>
           <View style={styles.contentContainer}>
             <View style={styles.contentTitleContainer}>
-              <Typography style={styles.contentTitle}>
+              <Text style={styles.contentTitle}>
                 <Trans
                   i18nKey="paywall.content.title"
                   components={{
                     bold: (
-                      <Typography
-                        variant="h1"
-                        style={[styles.contentTitle, styles.contentTitleBold]}
-                      >
+                      <Text style={[styles.contentTitle, styles.contentTitleBold]}>
                         <></>
-                      </Typography>
+                      </Text>
                     ),
                   }}
                 />
-              </Typography>
-              <Typography style={styles.contentSubtitle}>
-                {t('paywall.content.subtitle')}
-              </Typography>
+              </Text>
+              <Text style={styles.contentSubtitle}>{t('paywall.content.subtitle')}</Text>
             </View>
             <View style={styles.contentFeaturesContainer}>
               <ScrollView
@@ -140,12 +135,8 @@ const PayWall: React.FC = () => {
                       <SvgIcon name={feature.icon} />
                     </View>
                     <View style={styles.featureTextContainer}>
-                      <Typography variant="h3" color="white" style={styles.featureTitle}>
-                        {feature.title}
-                      </Typography>
-                      <Typography variant="body2" color="white" style={styles.featureSubtitle}>
-                        {feature.subtitle}
-                      </Typography>
+                      <Text style={styles.featureTitle}>{feature.title}</Text>
+                      <Text style={styles.featureSubtitle}>{feature.subtitle}</Text>
                     </View>
                   </View>
                 ))}
@@ -173,11 +164,9 @@ const PayWall: React.FC = () => {
                           )}
                         </View>
                         <View style={styles.subscriptionOptionText}>
-                          <Typography style={styles.subscriptionTitle}>{option.title}</Typography>
+                          <Text style={styles.subscriptionTitle}>{option.title}</Text>
                           {!option.CustomSubTitle ? (
-                            <Typography style={styles.subscriptionSubtitle}>
-                              {option.subtitle}
-                            </Typography>
+                            <Text style={styles.subscriptionSubtitle}>{option.subtitle}</Text>
                           ) : (
                             option.CustomSubTitle
                           )}
@@ -185,7 +174,7 @@ const PayWall: React.FC = () => {
                       </View>
                       {option.badge && (
                         <View style={styles.badgeContainer}>
-                          <Typography style={styles.badgeText}>{option.badge}</Typography>
+                          <Text style={styles.badgeText}>{option.badge}</Text>
                         </View>
                       )}
                     </View>
@@ -199,26 +188,26 @@ const PayWall: React.FC = () => {
                   style={styles.footerButton}
                   textStyle={styles.footerButtonText}
                 />
-                <Typography style={styles.footerText}>
+                <Text style={styles.footerText}>
                   {t('paywall.content.footer.subscription-notice.text')}
-                </Typography>
+                </Text>
                 <View style={styles.footerLinksContainer}>
                   <TouchableOpacity onPress={() => {}}>
-                    <Typography style={styles.footerLinkText}>
+                    <Text style={styles.footerLinkText}>
                       {t('paywall.content.footer.terms.title')}
-                    </Typography>
+                    </Text>
                   </TouchableOpacity>
-                  <Typography style={styles.footerLinkSeparator}>•</Typography>
+                  <Text style={styles.footerLinkSeparator}>•</Text>
                   <TouchableOpacity onPress={() => {}}>
-                    <Typography style={styles.footerLinkText}>
+                    <Text style={styles.footerLinkText}>
                       {t('paywall.content.footer.privacy.title')}
-                    </Typography>
+                    </Text>
                   </TouchableOpacity>
-                  <Typography style={styles.footerLinkSeparator}>•</Typography>
+                  <Text style={styles.footerLinkSeparator}>•</Text>
                   <TouchableOpacity onPress={() => {}}>
-                    <Typography style={styles.footerLinkText}>
+                    <Text style={styles.footerLinkText}>
                       {t('paywall.content.footer.restore.title')}
-                    </Typography>
+                    </Text>
                   </TouchableOpacity>
                 </View>
               </View>

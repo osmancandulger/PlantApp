@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React, { useState, useRef } from 'react';
-import { Screen, Typography, Button, View } from ':atoms/';
+import { Screen, Text, Button, View } from ':atoms/';
 import useStyleSheet from ':hooks/useStyleSheet';
 import initialStyle from './Onboarding.styles';
 import useRouting from ':hooks/useRoutings';
@@ -37,18 +37,18 @@ const Onboarding: React.FC = () => {
     <View style={styles.slideContainer}>
       <View style={styles.header}>
         <View style={styles.titleContainer}>
-          <Typography style={styles.title}>
+          <Text style={styles.title}>
             <Trans
               i18nKey="onboarding.identify.title"
               components={{
                 bold: (
-                  <Typography variant="h1" style={[styles.title, styles.titleBold]}>
+                  <Text style={[styles.title, styles.titleBold]}>
                     <></>
-                  </Typography>
+                  </Text>
                 ),
               }}
             />
-          </Typography>
+          </Text>
           <View style={styles.brushContainer}>
             <Image source={require('../../../assets/vectors/brush.png')} style={styles.brush} />
           </View>
@@ -68,18 +68,18 @@ const Onboarding: React.FC = () => {
     <View style={styles.slideContainer}>
       <View style={styles.header}>
         <View style={styles.titleContainer}>
-          <Typography style={styles.title}>
+          <Text style={styles.title}>
             <Trans
               i18nKey="onboarding.guide.title"
               components={{
                 bold: (
-                  <Typography variant="h1" style={[styles.title, styles.titleBold]}>
+                  <Text style={[styles.title, styles.titleBold]}>
                     <></>
-                  </Typography>
+                  </Text>
                 ),
               }}
             />
-          </Typography>
+          </Text>
           <View style={styles.guideContainer}>
             <Image
               source={require('../../../assets/vectors/brush.png')}

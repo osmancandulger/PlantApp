@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, ImageBackground } from 'react-native';
-import { View, Typography, TouchableOpacity } from ':atoms/';
+import { View, Text, TouchableOpacity } from ':atoms/';
 import { css } from '@emotion/native';
 import useStyleSheet from ':hooks/useStyleSheet';
 import initialStyle from './HorizontalCards.styles.ts';
@@ -37,7 +37,7 @@ const HorizontalCards: React.FC<HorizontalCardsProps> = ({
             blurAmount={50}
             reducedTransparencyFallbackColor="red"
           />
-          <Typography style={css([styles.title, titleStyle])}>{item.title}</Typography>
+          <Text style={css([styles.title, titleStyle])}>{item.title}</Text>
         </View>
       </ImageBackground>
     </TouchableOpacity>

@@ -26,14 +26,12 @@ A modern React Native mobile application designed to help users identify, care f
 - **Testing**: Jest + React Native Testing Library
 - **Internationalization**: i18next
 
-
 ### Prerequisites
 
 - Node.js >= 18
 - React Native CLI
 - Android Studio (for Android development)
 - Xcode (for iOS development)
-
 
 ## 🚀 Getting Started
 
@@ -57,7 +55,6 @@ src/
 ├── assets/            # Images, icons, fonts
 └── locale/            # Internationalization files
 ```
-
 
 ### Installation
 
@@ -156,7 +153,7 @@ npm run lint        # Run ESLint
 
 The app follows Atomic Design principles:
 
-- **Atoms**: Basic UI components (Button, Input, Typography)
+- **Atoms**: Basic UI components (Button, Input, Text)
 - **Molecules**: Complex components (Carousel, HorizontalCards)
 - **Organisms**: Screen-level components
 - **Templates**: Layout structures

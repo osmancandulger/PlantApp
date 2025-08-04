@@ -1,13 +1,8 @@
 export { default as Button } from './Button';
 export type { ButtonProps, ButtonVariant, ButtonSize } from './Button';
 
-export { default as Typography } from './Typography';
-export type {
-  TypographyProps,
-  TypographyVariant,
-  TypographyColor,
-  TypographyAlign,
-} from './Typography';
+export { default as Text } from './Text';
+export type { TextProps, TextVariant, TextColor, TextAlign } from './Text';
 
 export { default as Screen } from './Screen';
 

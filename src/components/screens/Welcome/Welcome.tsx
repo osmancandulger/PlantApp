@@ -1,5 +1,5 @@
 import React from 'react';
-import { Screen, Typography, Button, View } from ':atoms/';
+import { Screen, Text, Button, View } from ':atoms/';
 import useStyleSheet from ':hooks/useStyleSheet';
 import initialStyle from './Welcome.styles';
 import useRouting from ':hooks/useRoutings';
@@ -18,23 +18,22 @@ const Welcome: React.FC = () => {
 
   return (
     <Screen>
-      {/* TODO: Add a background image */}
       <View style={styles.container}>
         <View style={styles.header}>
-          <Typography style={styles.title}>
+          <Text style={styles.title}>
             <Trans
               i18nKey="get-started.title"
               values={{ appName: 'PlantApp' }}
               components={{
                 bold: (
-                  <Typography variant="h1" style={styles.titleBold}>
+                  <Text style={styles.titleBold} variant="heading">
                     <></>
-                  </Typography>
+                  </Text>
                 ),
               }}
             />
-          </Typography>
-          <Typography style={styles.subtitle}>{t('get-started.subtitle')}</Typography>
+          </Text>
+          <Text style={styles.subtitle}>{t('get-started.subtitle')}</Text>
         </View>
 
         <View style={styles.imageContainer}>
@@ -54,18 +53,18 @@ const Welcome: React.FC = () => {
             style={styles.button}
             textStyle={styles.buttonText}
           />
-          <Typography align="center" style={styles.termsNotice}>
+          <Text align="center" style={styles.termsNotice}>
             <Trans
               i18nKey="get-started.terms-notice"
               components={{
                 underline: (
-                  <Typography style={[styles.termsNotice, styles.termsNoticeUnderline]}>
+                  <Text style={[styles.termsNotice, styles.termsNoticeUnderline]}>
                     <></>
-                  </Typography>
+                  </Text>
                 ),
               }}
             />
-          </Typography>
+          </Text>
         </View>
       </View>
     </Screen>
