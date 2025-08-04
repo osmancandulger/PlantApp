@@ -10,14 +10,14 @@ Create a `.env` file in the project root directory:
 
 ```bash
 # API Configuration
-API_BASE_URL=https://dummy-api-jtg6bessta-ey.a.run.app/
+API_BASE_URL=URL
 ```
 
 ### Environment Variables
 
-| Variable       | Description  | Example                                      |
-| -------------- | ------------ | -------------------------------------------- |
-| `API_BASE_URL` | API base URL | `https://dummy-api-jtg6bessta-ey.a.run.app/` |
+| Variable       | Description  | Example |
+| -------------- | ------------ | ------- |
+| `API_BASE_URL` | API base URL | `URL`   |
 
 ## API Service Structure
 

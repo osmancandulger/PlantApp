@@ -82,6 +82,7 @@ android {
         applicationId "com.plantapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        resValue "string", "build_config_package", "com.plantapp"
         versionCode 1
         versionName "1.0"
     }
@@ -94,6 +95,17 @@ android {
         }
     }
     buildTypes {
+        dev {
+            dimension :"environment",
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            applicationIdSuffix ".development"
+        }
+        prod {
+            dimension :"environment",
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+        }
         debug {
             signingConfig signingConfigs.debug
         }
@@ -106,7 +118,10 @@ android {
         }
     }
 }
-
+rootProject.ext.envConfigFiles = [
+    dev: ".env.development",
+    prod: ".env"
+]
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
@@ -117,3 +132,4 @@ dependencies {
         implementation jscFlavor
     }
 }
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
