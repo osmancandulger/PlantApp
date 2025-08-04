@@ -149,12 +149,14 @@ This project uses:
 ### Available Scripts
 
 ```bash
-npm run android      # Run on Android
-npm run ios         # Run on iOS
-npm start           # Start Metro bundler
-npm test            # Run tests
-npm run lint        # Run ESLint
-npm run commitlint  # Validate commit messages
+ android:dev       # Run on Android
+ android:prod      # Run on Android
+ ios               # Run on iOS
+ start             # Start Metro bundler
+ test              # Run tests
+ run lint          # Run ESLint
+ prepare           # husky
+ commitlint        # Validate commit messages
 ```
 
 ### Commit Message Convention
