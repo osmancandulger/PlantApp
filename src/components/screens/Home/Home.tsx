@@ -1,6 +1,16 @@
 import React, { useMemo } from 'react';
-import { Image, ImageBackground, ScrollView } from 'react-native';
-import { Screen, Text, View, Input, Row, GradientText, SvgIcon, TouchableOpacity } from ':atoms/';
+import { Image, ImageBackground } from 'react-native';
+import {
+  Screen,
+  Text,
+  View,
+  Input,
+  Row,
+  GradientText,
+  SvgIcon,
+  TouchableOpacity,
+  ScrollView,
+} from ':atoms/';
 import { HorizontalCards } from ':molecules/';
 import { CardItem } from ':molecules/HorizontalCards/types';
 import useStyleSheet from ':hooks/useStyleSheet';
@@ -45,7 +55,7 @@ const Home: React.FC = () => {
 
   return (
     <Screen>
-      <ScrollView style={css(styles.container)} showsVerticalScrollIndicator={false}>
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
         <View style={styles.headerContainer}>
           <View style={styles.headerWrapper}>
             <Row style={styles.leafContainer}>

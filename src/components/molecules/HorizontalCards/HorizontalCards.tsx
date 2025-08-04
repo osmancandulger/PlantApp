@@ -1,6 +1,6 @@
 import React from 'react';
-import { ScrollView, ImageBackground } from 'react-native';
-import { View, Text, TouchableOpacity } from ':atoms/';
+import { ImageBackground } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity } from ':atoms/';
 import { css } from '@emotion/native';
 import useStyleSheet from ':hooks/useStyleSheet';
 import initialStyle from './HorizontalCards.styles.ts';

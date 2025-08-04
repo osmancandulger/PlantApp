@@ -12,8 +12,7 @@ export default function () {
     `;
 
     style.contentContainer = `
-      padding-horizontal: ${getResponsiveWidth(24)}px;
-      gap: ${getResponsiveWidth(16)}px;
+      gap: 10px
     `;
 
     style.card = `
@@ -21,7 +20,6 @@ export default function () {
       height: ${getResponsiveHeight(164)}px;
       border-radius: 12px;
       overflow: hidden;
-      margin-left: 10px;
     `;
 
     style.cardImage = `
