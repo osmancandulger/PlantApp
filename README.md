@@ -62,7 +62,7 @@ src/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/PlantApp.git
+   git clone https://github.com/osmancandulger/PlantApp.git
    cd PlantApp
    ```
 
