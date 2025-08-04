@@ -20,6 +20,7 @@ A modern React Native mobile application designed to help users identify, care f
 - **Framework**: React Native 0.80.2
 - **Language**: TypeScript
 - **State Management**: Redux Toolkit
+- **Data Fetching**: RTK Query (Redux Toolkit Query)
 - **Navigation**: React Navigation v7
 - **Styling**: Emotion Native
 - **Animations**: React Native Reanimated
@@ -124,11 +125,13 @@ npm test -- --coverage
 ```
 
 ## 📱 Screenshots
+| Get started | Onboarding | Paywall | Home |
+|-------------|------------|---------|------|
+| <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 27" src="https://github.com/user-attachments/assets/1b9bcb63-6aef-489e-acc7-14d08b66d879" /> | <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 33" src="https://github.com/user-attachments/assets/34aef967-24c8-4b3e-87f0-9d1ab406d96f" />  <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 40" src="https://github.com/user-attachments/assets/9fa3f458-0768-454c-bda9-c0786fbe7efb" /> | <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 45" src="https://github.com/user-attachments/assets/a68b6f6e-37d2-4d6b-b7b2-5a7e8576b919" /> | <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 09" src="https://github.com/user-attachments/assets/6d8c9c05-cd9d-4fbe-a976-2db17aa5e728" /> 
 
-| Home Screen                                                          | Plant Scanner                                                              | My Garden                                                                |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| ![Home](https://via.placeholder.com/300x600/4CAF50/FFFFFF?text=Home) | ![Scanner](https://via.placeholder.com/300x600/4CAF50/FFFFFF?text=Scanner) | ![Garden](https://via.placeholder.com/300x600/4CAF50/FFFFFF?text=Garden) |
 
+## Demo
+https://github.com/user-attachments/assets/139c5114-f663-4a93-9563-2e24c6c60a9f
 ## 🛠️ Development
 
 ### Code Style
@@ -214,10 +217,6 @@ The app follows Atomic Design principles:
 - Use conventional commit messages
 - Follow the existing code style
 - Update documentation as needed
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
