@@ -147,6 +147,35 @@ npm run ios         # Run on iOS
 npm start           # Start Metro bundler
 npm test            # Run tests
 npm run lint        # Run ESLint
+npm run commitlint  # Validate commit messages
+```
+
+### Commit Message Convention
+
+This project uses commitlint to enforce conventional commit messages. Only the following commit types are allowed:
+
+- `feat`: New features
+- `fix`: Bug fixes
+- `style`: Code style changes (formatting, missing semicolons, etc.)
+- `chore`: Maintenance tasks, dependencies, etc.
+- `docs`: Documentation changes
+- `refactor`: Code refactoring
+
+**Examples:**
+
+```bash
+git commit -m "feat: add plant scanning functionality"
+git commit -m "fix: resolve navigation issue in home screen"
+git commit -m "style: format code with prettier"
+git commit -m "chore: update dependencies"
+```
+
+**Invalid examples:**
+
+```bash
+git commit -m "test: add new test"        # ❌ 'test' type not allowed
+git commit -m "docs: update readme"       # ❌ 'docs' type not allowed
+git commit -m "refactor: improve code"    # ❌ 'refactor' type not allowed
 ```
 
 ### Component Architecture
