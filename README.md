@@ -130,8 +130,8 @@ npm test -- --coverage
 | <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 27" src="https://github.com/user-attachments/assets/1b9bcb63-6aef-489e-acc7-14d08b66d879" /> | <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 33" src="https://github.com/user-attachments/assets/34aef967-24c8-4b3e-87f0-9d1ab406d96f" />  <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 40" src="https://github.com/user-attachments/assets/9fa3f458-0768-454c-bda9-c0786fbe7efb" /> 
 
 | Paywall | Home
-|---------|------
-| <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 45" src="https://github.com/user-attachments/assets/a68b6f6e-37d2-4d6b-b7b2-5a7e8576b919" /> | <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 09" src="https://github.com/user-attachments/assets/6d8c9c05-cd9d-4fbe-a976-2db17aa5e728" /> |<img width="180" height="809" alt="Screenshot 2025-08-04 at 10 01 43" src="https://github.com/user-attachments/assets/00053505-51dd-4566-9db1-2ffd2769f8bc" />
+|---------|--------
+| <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 45" src="https://github.com/user-attachments/assets/a68b6f6e-37d2-4d6b-b7b2-5a7e8576b919" /> | <img width="180" height="809" alt="Screenshot 2025-08-04 at 09 55 09" src="https://github.com/user-attachments/assets/6d8c9c05-cd9d-4fbe-a976-2db17aa5e728" />  <img width="180" height="809" alt="Screenshot 2025-08-04 at 10 01 43" src="https://github.com/user-attachments/assets/00053505-51dd-4566-9db1-2ffd2769f8bc" />
 
 
 ## Demo
