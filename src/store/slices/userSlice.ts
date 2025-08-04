@@ -1,16 +1,31 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { User } from '../../types';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface UserState {
   currentUser: User | null;
   isAuthenticated: boolean;
   hasCompletedOnboarding: boolean;
+  loading: boolean;
 }
+export const getOnboardingStatus = createAsyncThunk('onboarding/loadStatus', async () => {
+  const value = await AsyncStorage.getItem('onboardingCompleted');
+  return value === 'true';
+});
+
+export const setOnboardingStatus = createAsyncThunk(
+  'onboarding/setStatus',
+  async (value: boolean) => {
+    await AsyncStorage.setItem('onboardingCompleted', value.toString());
+    return value;
+  },
+);
 
 const initialState: UserState = {
   currentUser: null,
   isAuthenticated: false,
   hasCompletedOnboarding: false,
+  loading: false,
 };
 
 const userSlice = createSlice({
@@ -37,6 +52,23 @@ const userSlice = createSlice({
         state.currentUser.hasCompletedOnboarding = action.payload;
       }
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getOnboardingStatus.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getOnboardingStatus.fulfilled, (state, action: PayloadAction<boolean>) => {
+        state.loading = false;
+        state.hasCompletedOnboarding = action.payload;
+      })
+      .addCase(setOnboardingStatus.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(setOnboardingStatus.fulfilled, (state, action: PayloadAction<boolean>) => {
+        state.hasCompletedOnboarding = action.payload;
+        state.loading = false;
+      });
   },
 });
 

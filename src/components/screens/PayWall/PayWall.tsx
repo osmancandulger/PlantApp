@@ -7,19 +7,17 @@ import initialStyle from './PayWall.styles';
 import { css } from '@emotion/native';
 import { Trans } from 'react-i18next';
 import { t } from 'i18next';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useDispatch } from 'react-redux';
-import { setOnboardingCompleted } from ':store/slices/userSlice';
+import { useAppDispatch } from ':store/hooks';
+import { setOnboardingStatus } from ':store/slices/userSlice';
 import { useNavigation } from '@react-navigation/native';
 
 const PayWall: React.FC = () => {
   const styles = useStyleSheet(initialStyle());
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigation = useNavigation();
   const handleOnTapContinue = async () => {
     try {
-      await AsyncStorage.setItem('onboardingCompleted', 'true');
-      dispatch(setOnboardingCompleted(true));
+      await dispatch(setOnboardingStatus(true));
     } catch (error) {
       console.error('Error saving onboarding status:', error);
     }
