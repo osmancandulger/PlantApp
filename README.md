@@ -179,13 +179,6 @@ git commit -m "style: format code with prettier"
 git commit -m "chore: update dependencies"
 ```
 
-**Invalid examples:**
-
-```bash
-git commit -m "test: add new test"        # ❌ 'test' type not allowed
-git commit -m "docs: update readme"       # ❌ 'docs' type not allowed
-git commit -m "refactor: improve code"    # ❌ 'refactor' type not allowed
-```
 
 ### Component Architecture
 
