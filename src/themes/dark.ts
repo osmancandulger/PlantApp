@@ -1,5 +1,5 @@
 import { Theme } from '@emotion/react';
-import colors from '../constants/colors';
+import colors from '../constants/Colors';
 import { ThemeType } from '../enums/common';
 export const theme: Theme = {
   type: ThemeType.DARK,
